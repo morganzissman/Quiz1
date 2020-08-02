@@ -1,6 +1,8 @@
 class HiLo():
     def __init__(self, v=1):
         pass
+    def guess(self,n):
+        pass
 
 # the Hangman game
 

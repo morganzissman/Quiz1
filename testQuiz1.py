@@ -18,10 +18,10 @@ from quiz1 import Hangman
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.game = HiLo(1)
-    # def test_game(self):
-    #     self.assertTrue(self.game.guess(0) == -1)
-    #     self.assertTrue(self.game.guess(1) == 0)
-    #     self.assertTrue(self.game.guess(2) == 1)
+    def test_game(self):
+        self.assertTrue(self.game.guess(0) == -1)
+        self.assertTrue(self.game.guess(1) == 0)
+        self.assertTrue(self.game.guess(2) == 1)
 
 
 # The Hangman class is a game of hangman where you create an instance by
@@ -50,15 +50,15 @@ class HangmanTestCase(unittest.TestCase):
     def setUp(self):
         self.game = Hangman("Apple")
 
-    # def test_guess(self):
-        # s = self.game.guess("A")
-        # self.assertTrue(s == "A____", f"{s}")
-        # self.assertTrue(self.game.turns == 1,f"{self.game.turns}")
-        # self.assertTrue(self.game.guess("B") == "A____")
-        # self.assertTrue(self.game.turns == 2)
-        # self.assertTrue(self.game.guess("p") == "Ap___")
-        # self.assertTrue(self.game.turns == 3)
-        # self.assertTrue(self.game.guess("e") == "Ap__e")
+    def test_guess(self):
+        s = self.game.guess("A")
+        self.assertTrue(s == "A____", f"{s}")
+        self.assertTrue(self.game.turns == 1,f"{self.game.turns}")
+        self.assertTrue(self.game.guess("B") == "A____")
+        self.assertTrue(self.game.turns == 2)
+        self.assertTrue(self.game.guess("p") == "App__")
+        self.assertTrue(self.game.turns == 3)
+        self.assertTrue(self.game.guess("e") == "Ap__e")
 
 
 if __name__ == '__main__':
